@@ -1,0 +1,30 @@
+{
+  "name": "slash-command",
+  "version": "0.0.1",
+  "description": "Simple slash command parsing module",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/.bin/mocha --reporter spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/krismuniz/slash-command.git"
+  },
+  "keywords": [
+    "slash",
+    "command",
+    "subcommands",
+    "parsing",
+    "string"
+  ],
+  "author": "Kristian Muñiz <kristian.muniz@upr.edu> (https://www.krismuniz.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/krismuniz/slash-command/issues"
+  },
+  "homepage": "https://github.com/krismuniz/slash-command#readme",
+  "devDependencies": {
+    "chai": "^3.4.1",
+    "mocha": "^2.3.4"
+  }
+}
