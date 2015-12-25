@@ -1,5 +1,7 @@
 # slash-command
 
+[![Build Status](https://travis-ci.org/krismuniz/slash-command.svg?branch=master)](https://travis-ci.org/krismuniz/slash-command)
+
 A simple ***slash command parsing module*** written in JavaScript. In other words, a function that parses a string and returns an object which separates the command keyword(s) from the body of the command.
 
 ##### Example:
