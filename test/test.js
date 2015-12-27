@@ -2,7 +2,6 @@
 const slashCommand = require('../index.js');
 const expect = require('chai').expect;
 
-let s1 = '/google/calendar';
 describe('slashCommand() [function]', () => {
 
   describe('Error handling:', () => {
