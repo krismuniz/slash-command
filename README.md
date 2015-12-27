@@ -11,7 +11,8 @@ slashCommand('/mycommand This is the command body');
 `slashCommand()` returns the following object:
 ```js
 {
-  command: 'mycommand', // main command (first in string)
+  slashcommand: '/mycommand', // command(s) as stated
+  command: 'mycommand', // main command name (first in string)
   subcommands: null, // array of subcommands; see below for more info.
   body: 'This is the command body', // the body of the command
   original: '/mycommand This is the command body' // the original string
@@ -55,6 +56,7 @@ slashCommand('/tweet This is a tweet.');
 `slashCommand()` returns the following object:
 ```js
 {
+  slashcommand: '/tweet', // command(s) as stated
   command: 'tweet', // main command (first in string)
   subcommands: null, // array of all subcommands; null if there are none
   body: 'This is a tweet.', // the body of the command
@@ -78,6 +80,7 @@ slashCommand('/google/calendar Meeting with Sarah at 6pm.');
 `slashCommand()` returns the following object:
 ```js
 {
+  slashcommand: '/google/calendar', // command(s) as stated
   command: 'google', // main command (first in string)
   subcommands: ['calendar'], // array of all subcommands
   body: 'Meeting with Sarah at 6pm.', // the body of the command

@@ -13,10 +13,11 @@ describe('slashCommand() [function]', () => {
     });
   });
 
-  it('returns an [object] that contains all necessary keys (\'command\', \'subcommands\', \'body\', and \'original\')', () => {
+  it('returns an [object] that contains all necessary keys (\'slashcommand\', \'command\', \'subcommands\', \'body\', and \'original\')', () => {
     let result = slashCommand('/tweet hi');
     expect(result).to.be.an('object');
     expect(result).to.have.keys({
+      'slashcommand': '/tweet',
       'command': 'tweet',
       'subcommands': null,
       'body': 'hi',
@@ -28,6 +29,7 @@ describe('slashCommand() [function]', () => {
     let result = slashCommand('');
     expect(result).to.be.an('object');
     expect(result).to.deep.equal({
+      'slashcommand': null,
       'command': null,
       'subcommands': null,
       'body': null,
@@ -39,6 +41,7 @@ describe('slashCommand() [function]', () => {
     let result = slashCommand('/tweet This is a tweet');
     expect(result).to.be.an('object');
     expect(result).to.deep.equal({
+      'slashcommand': '/tweet',
       'command': 'tweet',
       'subcommands': null,
       'body': 'This is a tweet',
@@ -50,6 +53,7 @@ describe('slashCommand() [function]', () => {
     let result = slashCommand('/google/calendar Meeting with Hannah at 5pm');
     expect(result).to.be.an('object');
     expect(result).to.deep.equal({
+      'slashcommand': '/google/calendar',
       'command': 'google',
       'subcommands': ['calendar'],
       'body': 'Meeting with Hannah at 5pm',
@@ -61,6 +65,7 @@ describe('slashCommand() [function]', () => {
     let result = slashCommand('/google/calendar/new Meeting with Hannah at 5pm');
     expect(result).to.be.a('object');
     expect(result).to.deep.equal({
+      'slashcommand': '/google/calendar/new',
       'command': 'google',
       'subcommands': ['calendar', 'new'],
       'body': 'Meeting with Hannah at 5pm',
@@ -68,14 +73,15 @@ describe('slashCommand() [function]', () => {
     });
   });
 
-  it('given a string with no slash command(s), returns correct object (\'command\' and \'subcommands\' are null)', () => {
-    let result = slashCommand('/google/calendar/new Meeting with Hannah at 5pm');
+  it('given a string with no slash command(s), returns correct object (\'slashcommand\', \'command\' and \'subcommands\' are null)', () => {
+    let result = slashCommand('Meeting with Hannah at 5pm');
     expect(result).to.be.a('object');
     expect(result).to.deep.equal({
-      'command': 'google',
-      'subcommands': ['calendar', 'new'],
+      'slashcommand': null,
+      'command': null,
+      'subcommands': null,
       'body': 'Meeting with Hannah at 5pm',
-      'original': '/google/calendar/new Meeting with Hannah at 5pm'
+      'original': 'Meeting with Hannah at 5pm'
     });
   });
 
@@ -83,6 +89,7 @@ describe('slashCommand() [function]', () => {
     let result = slashCommand('/logout');
     expect(result).to.be.a('object');
     expect(result).to.deep.equal({
+      'slashcommand': '/logout',
       'command': 'logout',
       'subcommands': null,
       'body': null,
