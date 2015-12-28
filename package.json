@@ -26,6 +26,7 @@
   "homepage": "https://github.com/krismuniz/slash-command#readme",
   "devDependencies": {
     "chai": "^3.4.1",
+    "coveralls": "^2.11.6",
     "istanbul": "^0.4.1",
     "mocha": "^2.3.4"
   }
