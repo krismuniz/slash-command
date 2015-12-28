@@ -1,6 +1,6 @@
 # slash-command
 
-[![Build Status](https://travis-ci.org/krismuniz/slash-command.svg?branch=master)](https://travis-ci.org/krismuniz/slash-command)
+[![Build Status](https://travis-ci.org/krismuniz/slash-command.svg?branch=master)](https://travis-ci.org/krismuniz/slash-command) [![License:MIT](https://img.shields.io/badge/license-MIT-blue.svg)](http://opensource.org/licenses/MIT) [![Coverage Status](https://coveralls.io/repos/krismuniz/slash-command/badge.svg?branch=master&service=github)](https://coveralls.io/github/krismuniz/slash-command?branch=master)
 
 A simple ***slash command parsing module*** written in JavaScript. In other words, a function that parses a string and returns an object which separates the command keyword(s) from the body of the command.
 
