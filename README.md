@@ -23,7 +23,7 @@ slashCommand('/mycommand This is the command body');
 
 This tiny module abstracts away the string-parsing process: string manipulation, matching regular expressions, mapping arrays, replacing strings, etc.
 
-`slash-command` takes a string, parses it, and returns an object containing the slash command keywords, subcommands (see below), body, and the original string.
+`slash-command` takes a string, parses it, and returns an object containing the slash command keywords, subcommands (see [below](#subcommands)), body, and the original string.
 
 #### Use cases
 
