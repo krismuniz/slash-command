@@ -3,7 +3,7 @@ const slashCommand = (s) => {
   if (typeof s !== 'string') {
     throw new TypeError('Argument must be a string.');
   }
-  let cmds = s.split(' ')[0].match(/\/([a-z\d-]+)/ig);
+  let cmds = s.split(' ')[0].match(/\/([\w-=:.@]+)/ig);
   let slashcmds = null;
   let subcmds = null;
   let body = s.trim() || null;
