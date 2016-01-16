@@ -1,6 +1,6 @@
 {
   "name": "slash-command",
-  "version": "0.0.51",
+  "version": "0.0.52",
   "description": "Simple slash command parsing module",
   "main": "index.js",
   "scripts": {
